@@ -20,5 +20,17 @@ const userWord = prompt("Inserisci una parola");
 const isUserWordValid = userWord.length > 0;
 console.log(userWord, isUserWordValid);
 
-let reversedWord = wordReverse("hola");
+let reversedWord = wordReverse(userWord);
 console.log(reversedWord);
+
+// if (userWord === reversedWord) {
+//   console.log("La parola inserita è palindroma");
+// } else {
+//   console.log("La parola inserita non è palindroma");
+// }
+
+console.log(
+  userWord === reversedWord
+    ? "La parola inserita è palindroma"
+    : "La parola inserita non è palindroma"
+);
