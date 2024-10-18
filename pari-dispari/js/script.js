@@ -13,5 +13,23 @@ function randomNum(min, max) {
   return num;
 }
 
-let aNum = randomNum(1, 5);
-console.log(aNum);
+// # data
+
+// const computerNum = randomNum(1, 5);
+// console.log("computerNum: ", computerNum);
+
+// const userNum = parseInt(prompt("Inserisci un numero da 1 a 5"));
+// console.log("userNum: ", userNum);
+
+const userChoice = prompt('Scegli tra "pari" e "dispari"');
+console.log(userChoice);
+
+// # validation
+
+// const isUserNumValid = userNum < 6 && userNum > 0;
+// console.log(isUserNumValid);
+
+const isUserChoideValid = userChoice === "pari" || userChoice === "dispari";
+console.log(isUserChoideValid);
+
+// # sum and result
