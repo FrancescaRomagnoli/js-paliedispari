@@ -17,10 +17,8 @@ function stringReverse(str) {
 // # user data
 
 const userWord = prompt("Inserisci una parola");
-const isUserWordValid = userWord.length > 0;
+const isUserWordValid = userWord.length > 2;
 console.log(userWord, isUserWordValid);
-
-// let reversedWord = "";
 
 if (isUserWordValid) {
   reversedWord = stringReverse(userWord);
