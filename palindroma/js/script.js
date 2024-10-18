@@ -4,14 +4,14 @@
 
 // # functions
 
-function wordReverse(word) {
-  let newWord = "";
+function stringReverse(str) {
+  let newString = "";
 
-  for (let i = word.length - 1; i >= 0; i--) {
-    newWord += word[i];
+  for (let i = str.length - 1; i >= 0; i--) {
+    newString += str[i];
   }
 
-  return newWord;
+  return newString;
 }
 
 // # user data
@@ -20,11 +20,17 @@ const userWord = prompt("Inserisci una parola");
 const isUserWordValid = userWord.length > 0;
 console.log(userWord, isUserWordValid);
 
-let reversedWord = "";
+// let reversedWord = "";
 
 if (isUserWordValid) {
-  reversedWord = wordReverse(userWord);
+  reversedWord = stringReverse(userWord);
   console.log(reversedWord);
+  // # output
+  alert(
+    userWord === reversedWord
+      ? "La parola inserita è palindroma"
+      : "La parola inserita non è palindroma"
+  );
 } else {
   alert("La parola non è valida.");
 }
@@ -34,9 +40,3 @@ if (isUserWordValid) {
 // } else {
 //   console.log("La parola inserita non è palindroma");
 // }
-
-alert(
-  userWord === reversedWord
-    ? "La parola inserita è palindroma"
-    : "La parola inserita non è palindroma"
-);
