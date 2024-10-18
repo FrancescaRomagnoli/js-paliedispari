@@ -13,23 +13,49 @@ function randomNum(min, max) {
   return num;
 }
 
+function oddEven(firstNum, secondNum) {
+  let sum = firstNum + secondNum;
+  let isSumEven = false;
+  console.log(sum);
+
+  if (sum % 2 === 0) {
+    isSumEven = true;
+  }
+
+  return isSumEven;
+}
+
 // # data
 
-// const computerNum = randomNum(1, 5);
-// console.log("computerNum: ", computerNum);
+const computerNum = randomNum(1, 5);
+console.log("computerNum: ", computerNum);
 
-// const userNum = parseInt(prompt("Inserisci un numero da 1 a 5"));
-// console.log("userNum: ", userNum);
+const userNum = parseInt(prompt("Inserisci un numero da 1 a 5"));
+console.log("userNum: ", userNum);
 
 const userChoice = prompt('Scegli tra "pari" e "dispari"');
 console.log(userChoice);
 
 // # validation
 
-// const isUserNumValid = userNum < 6 && userNum > 0;
-// console.log(isUserNumValid);
+const isUserNumValid = userNum < 6 && userNum > 0;
+console.log(isUserNumValid);
 
 const isUserChoideValid = userChoice === "pari" || userChoice === "dispari";
 console.log(isUserChoideValid);
 
 // # sum and result
+
+let isUserChoiceEven = false;
+
+if (isUserNumValid && isUserChoideValid) {
+  if (userChoice === "pari") {
+    isUserChoiceEven = true;
+    console.log(isUserChoiceEven);
+  }
+  if (isSumEven && isUserChoiceEven) {
+    alert("Hai vinto!");
+  } else {
+    alert("Hai perso!");
+  }
+}
