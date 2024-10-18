@@ -39,23 +39,27 @@ console.log(userChoice);
 // # validation
 
 const isUserNumValid = userNum < 6 && userNum > 0;
-console.log(isUserNumValid);
 
 const isUserChoideValid = userChoice === "pari" || userChoice === "dispari";
-console.log(isUserChoideValid);
 
 // # sum and result
 
 let isUserChoiceEven = false;
 
 if (isUserNumValid && isUserChoideValid) {
+  let isSumEven = oddEven(userNum, computerNum);
+  console.log("isSumEven: ", isSumEven);
+
   if (userChoice === "pari") {
     isUserChoiceEven = true;
     console.log(isUserChoiceEven);
   }
+
   if (isSumEven && isUserChoiceEven) {
     alert("Hai vinto!");
   } else {
     alert("Hai perso!");
   }
+} else {
+  alert("Dati non validi.");
 }
